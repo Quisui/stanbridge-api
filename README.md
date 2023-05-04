@@ -9,14 +9,14 @@ git clone https://github.com/Quisui/stanbridge-api.git
 ```bash
 composer install
 ```
-### Change your env files, I didn't dockerize the app for practical purposes, check my other repos to [check](https://github.com/Quisui/buckhill-challenge) how i dockerized those
-Create a database in mysql named standbdrige or any name you want
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=standbdrige
-DB_USERNAME=root
-DB_PASSWORD=password
+### Change your env files, I didn't dockerize the app for practical purposes, check my other repos to [check](https://github.com/Quisui/buckhill-challenge) how i dockerized those  <br />
+Create a database in mysql named standbdrige or any name you want  <br />
+DB_CONNECTION=mysql  <br />
+DB_HOST=127.0.0.1  <br />
+DB_PORT=3306  <br />
+DB_DATABASE=standbdrige  <br />
+DB_USERNAME=root  <br />
+DB_PASSWORD=password  <br />
 ### Clear cache
 ```bash
 php artisan optimize:clear
