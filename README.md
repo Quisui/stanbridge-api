@@ -54,9 +54,9 @@ So as the endpoints said we can return all courses from our database that has th
 - to get an specific course with his relations we used this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
 
 # Resources not customized at this moment
-# No swagger added but I've that implementation here for example [check]()
+# No swagger added but I've that implementation here for example [check](https://github.com/Quisui/buckhill-challenge/blob/master/app/Http/Controllers/Controller.php) on the begining of the controller code
 # Php insights Scores to ensure best quality code
-<img width="454" alt="image" src="https://user-images.githubusercontent.com/22399803/236127110-a1920046-cb47-4feb-8149-6b906d3ee0f7.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/22399803/236127110-a1920046-cb47-4feb-8149-6b906d3ee0f7.png">
 
 # IDE Helper Generator for Laravel
 This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.
