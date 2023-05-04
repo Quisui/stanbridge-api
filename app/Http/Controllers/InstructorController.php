@@ -13,7 +13,6 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -21,7 +20,6 @@ class InstructorController extends Controller
      */
     public function store(StoreInstructorRequest $request)
     {
-        //
     }
 
     /**
@@ -29,7 +27,6 @@ class InstructorController extends Controller
      */
     public function show(Instructor $instructor)
     {
-        //
     }
 
     /**
@@ -37,7 +34,6 @@ class InstructorController extends Controller
      */
     public function update(UpdateInstructorRequest $request, Instructor $instructor)
     {
-        //
     }
 
     /**
@@ -45,6 +41,5 @@ class InstructorController extends Controller
      */
     public function destroy(Instructor $instructor)
     {
-        //
     }
 }

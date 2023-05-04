@@ -38,3 +38,22 @@ Student <br />
 - Belongs to many courses <br />
 - Has many instructors through Instructor and Course <br />
 
+# Courses
+So as the endpoints said we can return all courses from our database that has the specific query parameters that we want
+- This return all courses with students and the instructor this [test]() <br />
+- To filter something in this case the present status we can use this [test]() <br />
+ - for example with an specific instructor or maybe paginate or limit the pagination <br />
+ - Examples: <br />
+  - perPage = 5 <br />
+  - instructor = 1 <br />
+  - present = true|false <br />
+- to update the Present status of a student in a course we use this [test]() <br />
+    check [request]()
+- to get an specific course with his relations we used this [test]() <br />
+# Resources not customized at this moment
+# No swagger added but I've that implementation here for example [check]()
+# Php insights Scores to ensure best quality code
+
+# IDE Helper Generator for Laravel
+This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.
+
