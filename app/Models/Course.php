@@ -17,7 +17,7 @@ class Course extends Model
 
     public function students()
     {
-        return $this->belongsToMany(Student::class)->withPivot('present');
+        return $this->belongsToMany(Student::class, 'course_students')->withPivot('present')->withTimestamps();
     }
 
     public function present($studentId, $present = true)

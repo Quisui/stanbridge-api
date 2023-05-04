@@ -22,7 +22,7 @@ class StoreInstructorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+
         ];
     }
 }

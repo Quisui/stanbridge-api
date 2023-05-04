@@ -13,7 +13,6 @@ class CourseStudentController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -21,7 +20,6 @@ class CourseStudentController extends Controller
      */
     public function store(StoreCourseStudentRequest $request)
     {
-        //
     }
 
     /**
@@ -29,7 +27,6 @@ class CourseStudentController extends Controller
      */
     public function show(CourseStudent $courseStudent)
     {
-        //
     }
 
     /**
@@ -37,7 +34,6 @@ class CourseStudentController extends Controller
      */
     public function update(UpdateCourseStudentRequest $request, CourseStudent $courseStudent)
     {
-        //
     }
 
     /**
@@ -45,6 +41,5 @@ class CourseStudentController extends Controller
      */
     public function destroy(CourseStudent $courseStudent)
     {
-        //
     }
 }
