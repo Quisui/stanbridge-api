@@ -53,3 +53,7 @@ So as the endpoints said we can return all courses from our database that has th
 # Resources not customized at this moment
 # No swagger added but I've that implementation here for example [check]()
 # Php insights Scores to ensure best quality code
+
+# IDE Helper Generator for Laravel
+This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.
+

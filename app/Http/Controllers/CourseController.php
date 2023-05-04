@@ -63,7 +63,7 @@ class CourseController extends Controller
     public function update(UpdateCourseRequest $request, Course $course)
     {
         $course->present($request->student_id, $request->present);
-        if (!$course->save()) {
+        if (! $course->save()) {
             throw new HttpException(Response::HTTP_INTERNAL_SERVER_ERROR, 'Student Status not updated, check with support');
         }
         return response()->json([
