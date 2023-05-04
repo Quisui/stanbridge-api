@@ -45,10 +45,10 @@ So as the endpoints said we can return all courses from our database that has th
 - This return all courses with students and the instructor this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) ->  testAllCoursesCanBeReturned() <br />
 - To filter something in this case the present status we can use this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testAllCoursesCanHaveQueryFilters() <br />
  - for example with an specific instructor or maybe paginate or limit the pagination <br />
- - Examples: <br />
-  - perPage = 5 <br />
-  - instructor = 1 <br />
-  - present = true|false <br />
+         - Examples: <br />
+          - perPage = 5 <br />
+          - instructor = 1 <br />
+          - present = true|false <br />
 - to update the Present status of a student in a course we use this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
     check [request](https://github.com/Quisui/stanbridge-api/blob/develop/app/Http/Requests/UpdateCourseRequest.php)
 - to get an specific course with his relations we used this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
