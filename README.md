@@ -40,7 +40,7 @@ php artisan migrate:fresh --seed
 - Belongs to many courses <br />
 - Has many instructors through Instructor and Course <br />
 
-# Courses
+# Courses - [Controller](https://github.com/Quisui/stanbridge-api/blob/master/app/Http/Controllers/CourseController.php) 
 So as the endpoints said we can return all courses from our database that has the specific query parameters that we want
 - This return all courses with students and the instructor this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) ->  testAllCoursesCanBeReturned() <br />
 - To filter something in this case the present status we can use this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testAllCoursesCanHaveQueryFilters() <br />
