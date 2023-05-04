@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\api\v1\controllers;
 
+use App\Models\Course;
 use App\Models\CourseStudent;
 use App\Models\Instructor;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -34,6 +35,7 @@ class CourseControllerTest extends TestCase
 
     public function testCoursesCanBeFilterInPresentOrNotStudents(): void
     {
+
         $withNoPresense = Course::query()
             ->where('instructor_id', $this->instructor->id)
             ->with(['students', 'instructor'])->withWhereHas('students', function ($query) {
