@@ -9,7 +9,7 @@ git clone https://github.com/Quisui/stanbridge-api.git
 ```bash
 composer install
 ```
-### Change your env files, I didn't dockerize the app for practical purposes, check my other repos to [check]() how i dockerized those
+### Change your env files, I didn't dockerize the app for practical purposes, check my other repos to [check](https://github.com/Quisui/buckhill-challenge) how i dockerized those
 Create a database in mysql named standbdrige or any name you want
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -22,7 +22,7 @@ DB_PASSWORD=password
 php artisan optimize:clear
 
 ```
-# Run [migrations]()
+# Run [migrations](https://github.com/Quisui/stanbridge-api/tree/develop/database/migrations)
 ```bash
 php artisan migrate:fresh --seed
 ```
@@ -40,16 +40,17 @@ Student <br />
 
 # Courses
 So as the endpoints said we can return all courses from our database that has the specific query parameters that we want
-- This return all courses with students and the instructor this [test]() <br />
-- To filter something in this case the present status we can use this [test]() <br />
+- This return all courses with students and the instructor this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) ->  testAllCoursesCanBeReturned() <br />
+- To filter something in this case the present status we can use this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testAllCoursesCanHaveQueryFilters() <br />
  - for example with an specific instructor or maybe paginate or limit the pagination <br />
  - Examples: <br />
   - perPage = 5 <br />
   - instructor = 1 <br />
   - present = true|false <br />
-- to update the Present status of a student in a course we use this [test]() <br />
-    check [request]()
-- to get an specific course with his relations we used this [test]() <br />
+- to update the Present status of a student in a course we use this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
+    check [request](https://github.com/Quisui/stanbridge-api/blob/develop/app/Http/Requests/UpdateCourseRequest.php)
+- to get an specific course with his relations we used this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
+
 # Resources not customized at this moment
 # No swagger added but I've that implementation here for example [check]()
 # Php insights Scores to ensure best quality code
