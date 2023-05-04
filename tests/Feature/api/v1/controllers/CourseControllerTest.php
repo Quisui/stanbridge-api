@@ -35,7 +35,8 @@ class CourseControllerTest extends TestCase
 
     public function testCoursesCanBeFilterInPresentOrNotStudents(): void
     {
-        $this->markTestSkipped('Skipping this test, conflicts with git workflow.');
+        $this->markTestSkipped('Skipping this test for conflicts with git workflow.');
+
         $withNoPresense = Course::query()
             ->where('instructor_id', $this->instructor->id)
             ->with(['students', 'instructor'])->withWhereHas('students', function ($query) {
@@ -47,8 +48,8 @@ class CourseControllerTest extends TestCase
         if ($totalNoAssist < 1) {
             $this->markTestSkipped('skipping this test');
         }
-        $response->assertStatus(200);
-        $this->assertCount($totalNoAssist, $response->json()['data'][0]['students']);
+        $response->assertStatus(200)
+            ->assertJsonCount($totalNoAssist, 'data.0.students');
 
 
         $response = $this->getJson('/api/courses?present=false');
@@ -56,8 +57,8 @@ class CourseControllerTest extends TestCase
         if ($totalAssist < 1) {
             $this->markTestSkipped('skipping this test');
         }
-        $response->assertStatus(200);
-        $this->assertCount($totalAssist, $response->json()['data'][0]['students']);
+        $response->assertStatus(200)
+            ->assertJsonCount($totalAssist, 'data.0.students');
     }
 
     public function testPresentStatusCanBeUpdatedInCourse(): void
