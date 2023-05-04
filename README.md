@@ -53,6 +53,8 @@ So as the endpoints said we can return all courses from our database that has th
     check [request](https://github.com/Quisui/stanbridge-api/blob/develop/app/Http/Requests/UpdateCourseRequest.php)
 - to get an specific course with his relations we used this [test](https://github.com/Quisui/stanbridge-api/blob/develop/tests/Feature/api/v1/controllers/CourseControllerTest.php) -> testPresentStatusCanBeUpdatedInCourse() <br />
 
+# [CI/CD](https://github.com/Quisui/stanbridge-api/blob/master/.github/workflows/laravel.yml)
+At this moment I keep it simple, just run my tests and then we can add a docker build for example
 # Resources not customized at this moment
 # No swagger added but I've that implementation here for example [check](https://github.com/Quisui/buckhill-challenge/blob/master/app/Http/Controllers/Controller.php) on the begining of the controller code
 # Php insights Scores to ensure best quality code
