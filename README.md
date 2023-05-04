@@ -55,6 +55,10 @@ So as the endpoints said we can return all courses from our database that has th
 
 # [CI/CD](https://github.com/Quisui/stanbridge-api/blob/master/.github/workflows/laravel.yml)
 At this moment I keep it simple, just run my tests and then we can add a docker build for example
+
+One test has conflicts with workflow, check image below to see in local env <br />
+<img width="603" alt="image" src="https://user-images.githubusercontent.com/22399803/236224598-6eb8ca9d-b44c-4ac1-9360-1d1900b426bb.png">
+
 # Resources not customized at this moment
 # No swagger added but I've that implementation here for example [check](https://github.com/Quisui/buckhill-challenge/blob/master/app/Http/Controllers/Controller.php) on the begining of the controller code
 # Php insights Scores to ensure best quality code
