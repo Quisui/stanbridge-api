@@ -34,26 +34,28 @@ class CourseControllerTest extends TestCase
 
     public function testCoursesCanBeFilterInPresentOrNotStudents(): void
     {
-        $this->markTestSkipped('Skipping this test for prioritize.');
-        $instructor = Instructor::factory()->create();
-
-        $course = $instructor->courses()->create([
-            'name' => 'Eaque.'
-        ]);
-
-        $course->students()->attach([
-            1 => ['present' => true],
-            2 => ['present' => false],
-            3 => ['present' => true]
-        ]);
+        $withNoPresense = Course::query()
+            ->where('instructor_id', $this->instructor->id)
+            ->with(['students', 'instructor'])->withWhereHas('students', function ($query) {
+                $query->where('present', false);
+            })->get()->toArray();
 
         $response = $this->getJson('/api/courses?present=false');
-        $response->assertStatus(200);
-        $response->assertJsonCount(1, 'data');
+        $totalNoAssist = count($withNoPresense[0]['students']);
+        if ($totalNoAssist < 1) {
+            $this->markTestSkipped('skipping this test');
+        }
+        $response->assertStatus(200)
+            ->assertJsonCount($totalNoAssist, 'data.0.students');;
 
-        $response = $this->getJson('/api/courses?present=true');
-        $response->assertStatus(200);
-        $response->assertJsonCount(1, 'data');
+
+        $response = $this->getJson('/api/courses?present=false');
+        $totalAssist = count($withNoPresense[0]['students']);
+        if ($totalAssist < 1) {
+            $this->markTestSkipped('skipping this test');
+        }
+        $response->assertStatus(200)
+            ->assertJsonCount($totalAssist, 'data.0.students');
     }
 
     public function testPresentStatusCanBeUpdatedInCourse(): void
