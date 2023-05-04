@@ -28,13 +28,15 @@ php artisan migrate:fresh --seed
 ```
 
 # Relations 
-Instructor <br />
+[Instructor](https://github.com/Quisui/stanbridge-api/blob/develop/app/Models/Instructor.php) <br />
 - Has many courses <br />
 - Has many through student and courses <br />
-Courses <br />
+
+[Courses](https://github.com/Quisui/stanbridge-api/blob/develop/app/Models/Course.php) <br />
 - Belongs to instructor <br />
 - Belongs to many students <br />
-Student <br />
+
+[Student](https://github.com/Quisui/stanbridge-api/blob/develop/app/Models/Student.php) <br />
 - Belongs to many courses <br />
 - Has many instructors through Instructor and Course <br />
 
@@ -54,7 +56,9 @@ So as the endpoints said we can return all courses from our database that has th
 # Resources not customized at this moment
 # No swagger added but I've that implementation here for example [check]()
 # Php insights Scores to ensure best quality code
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/22399803/236127110-a1920046-cb47-4feb-8149-6b906d3ee0f7.png">
 
 # IDE Helper Generator for Laravel
 This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.
+[Package](https://github.com/barryvdh/laravel-ide-helper)
 
