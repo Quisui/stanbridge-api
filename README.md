@@ -26,6 +26,7 @@ php artisan optimize:clear
 ```bash
 php artisan migrate:fresh --seed
 ```
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/22399803/236296588-d12687f6-ea4c-48fc-8829-aef6f81bf71f.png">
 
 # Relations 
 [Instructor](https://github.com/Quisui/stanbridge-api/blob/develop/app/Models/Instructor.php) <br />
